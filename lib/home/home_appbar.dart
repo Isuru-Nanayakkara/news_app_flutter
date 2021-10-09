@@ -14,11 +14,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: Icon(Icons.search),
-          tooltip: "Search",
+          tooltip: 'Search',
           color: Colors.black,
           iconSize: 34,
           onPressed: () {
-            print("Search button tapped");
+            print('Search button tapped');
           },
         ),
         SizedBox(width: 10),
