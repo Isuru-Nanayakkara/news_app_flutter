@@ -1,52 +1,37 @@
 import 'package:flutter/material.dart';
 import 'home/home_appbar.dart';
-import 'home/news_category_tab.dart';
+import 'home/news_tab_controller.dart';
 
 class App extends StatelessWidget {
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: HomeAppBar(),
-        body: DefaultTabController(
-          length: 6,
-          child: Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.white,
-              elevation: 0,
-              flexibleSpace: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TabBar(
-                    isScrollable: true,
-                    indicatorColor: Color.fromRGBO(232, 51, 36, 1),
-                    indicatorWeight: 4,
-                    tabs: [
-                      NewsCategoryTab(title: 'All'),
-                      NewsCategoryTab(title: 'Politics'),
-                      NewsCategoryTab(title: 'Business'),
-                      NewsCategoryTab(title: 'Technology'),
-                      NewsCategoryTab(title: 'Entertaintment'),
-                      NewsCategoryTab(title: 'Sports'),
-                    ],
-                  )
-                ],
-              ),
+        body: NewsTabController(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
             ),
-            body: TabBarView(
-              children: [
-                Center(child: Container(child: Text('All News'))),
-                Center(child: Container(child: Text('Political News'))),
-                Center(child: Container(child: Text('Business News'))),
-                Center(child: Container(child: Text('Technology News'))),
-                Center(child: Container(child: Text('Entertaintment News'))),
-                Center(child: Container(child: Text('Sports News'))),
-              ],
+            BottomNavigationBarItem(
+              icon: Icon(Icons.bookmark),
+              label: 'Saved',
             ),
-          ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Color.fromRGBO(22, 59, 118, 1),
+          onTap: _onItemTapped,
         ),
       ),
     );
+  }
+
+  void _onItemTapped(int index) {
+    _selectedIndex = index;
   }
 }
