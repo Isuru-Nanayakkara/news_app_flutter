@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app_flutter/home/home_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   @override
@@ -11,6 +12,9 @@ class _MainNavigationState extends State<MainNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Center(
+        child: _pages.elementAt(_selectedIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -34,4 +38,9 @@ class _MainNavigationState extends State<MainNavigation> {
       _selectedIndex = index;
     });
   }
+
+  static const List<Widget> _pages = <Widget>[
+    HomeScreen(),
+    Text('Saved News Articles List'),
+  ];
 }
