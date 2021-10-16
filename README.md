@@ -2,7 +2,7 @@
 
 A project I'm working on to learn Flutter and Dart.
 
-##### Things to Learn
+#### Things to Learn
 
 - [ ] Widgets
 - [ ] Navigation
@@ -10,6 +10,6 @@ A project I'm working on to learn Flutter and Dart.
 - [ ] Networking
 - [ ] Local Data Persistence
 
-##### Credits
+#### Credits
 
 [News app design](https://www.behance.net/gallery/102996435/News-App-Design) by [Umi Babakishiyeva](https://www.behance.net/umibabakishiyeva)

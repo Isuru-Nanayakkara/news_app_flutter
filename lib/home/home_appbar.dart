@@ -23,8 +23,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         SizedBox(width: 10),
         CircleAvatar(
-          backgroundImage: AssetImage('assets/images/profile.jpg'),
           radius: 18,
+          backgroundImage: AssetImage('assets/images/profile.jpg'),
         ),
         SizedBox(width: 20),
       ],
