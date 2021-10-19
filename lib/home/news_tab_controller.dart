@@ -5,7 +5,7 @@ class NewsTabController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 6,
+      length: 7,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -18,11 +18,12 @@ class NewsTabController extends StatelessWidget {
                 indicatorColor: Color.fromRGBO(232, 51, 36, 1),
                 indicatorWeight: 4,
                 tabs: [
-                  NewsCategoryTab(title: 'All'),
-                  NewsCategoryTab(title: 'Politics'),
+                  NewsCategoryTab(title: 'General'),
                   NewsCategoryTab(title: 'Business'),
+                  NewsCategoryTab(title: 'Science'),
                   NewsCategoryTab(title: 'Technology'),
                   NewsCategoryTab(title: 'Entertaintment'),
+                  NewsCategoryTab(title: 'Health'),
                   NewsCategoryTab(title: 'Sports'),
                 ],
               )
@@ -32,10 +33,11 @@ class NewsTabController extends StatelessWidget {
         body: TabBarView(
           children: [
             Center(child: Container(child: Text('All News'))),
-            Center(child: Container(child: Text('Political News'))),
             Center(child: Container(child: Text('Business News'))),
+            Center(child: Container(child: Text('Science News'))),
             Center(child: Container(child: Text('Technology News'))),
             Center(child: Container(child: Text('Entertaintment News'))),
+            Center(child: Container(child: Text('Health News'))),
             Center(child: Container(child: Text('Sports News'))),
           ],
         ),
