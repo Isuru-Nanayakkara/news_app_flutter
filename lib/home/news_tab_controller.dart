@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:news_app_flutter/data.dart';
 import 'news_category_tab.dart';
 
 class NewsTabController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 7,
+      length: newsCategories.length,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -17,29 +18,18 @@ class NewsTabController extends StatelessWidget {
                 isScrollable: true,
                 indicatorColor: Color.fromRGBO(232, 51, 36, 1),
                 indicatorWeight: 4,
-                tabs: [
-                  NewsCategoryTab(title: 'General'),
-                  NewsCategoryTab(title: 'Business'),
-                  NewsCategoryTab(title: 'Science'),
-                  NewsCategoryTab(title: 'Technology'),
-                  NewsCategoryTab(title: 'Entertaintment'),
-                  NewsCategoryTab(title: 'Health'),
-                  NewsCategoryTab(title: 'Sports'),
-                ],
+                tabs: newsCategories
+                    .map((category) => NewsCategoryTab(title: category))
+                    .toList(),
               )
             ],
           ),
         ),
         body: TabBarView(
-          children: [
-            Center(child: Container(child: Text('All News'))),
-            Center(child: Container(child: Text('Business News'))),
-            Center(child: Container(child: Text('Science News'))),
-            Center(child: Container(child: Text('Technology News'))),
-            Center(child: Container(child: Text('Entertaintment News'))),
-            Center(child: Container(child: Text('Health News'))),
-            Center(child: Container(child: Text('Sports News'))),
-          ],
+          children: newsCategories
+              .map(
+                  (category) => Center(child: Container(child: Text(category))))
+              .toList(),
         ),
       ),
     );
