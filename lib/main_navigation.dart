@@ -44,7 +44,7 @@ class _MainNavigationState extends State<MainNavigation> {
     });
   }
 
-  static const List<Widget> _pages = <Widget>[
+  static List<Widget> _pages = <Widget>[
     HeadlinesScreen(),
     Text('News Sources Grid'),
     Text('Saved News Articles List'),

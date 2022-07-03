@@ -42,8 +42,6 @@ Saved
 
 #### Development
 
----
-
 ##### Component Design
 
 Widgets
