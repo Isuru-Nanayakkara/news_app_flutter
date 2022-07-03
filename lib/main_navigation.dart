@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home/home_screen.dart';
+import 'screens/headlines/headlines_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   @override
@@ -19,8 +19,12 @@ class _MainNavigationState extends State<MainNavigation> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.newspaper),
+            label: 'Headlines',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.source),
+            label: 'Sources',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
@@ -41,7 +45,8 @@ class _MainNavigationState extends State<MainNavigation> {
   }
 
   static const List<Widget> _pages = <Widget>[
-    HomeScreen(),
+    HeadlinesScreen(),
+    Text('News Sources Grid'),
     Text('Saved News Articles List'),
   ];
 }

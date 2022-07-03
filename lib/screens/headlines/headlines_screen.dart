@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'home_appbar.dart';
 import 'news_tab_controller.dart';
+import 'widgets/headlines_appbar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HeadlinesScreen extends StatelessWidget {
+  const HeadlinesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: HomeAppBar(),
+      appBar: HeadlinesAppBar(),
       body: NewsTabController(),
     );
   }
