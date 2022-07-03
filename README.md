@@ -12,4 +12,4 @@ A project I'm working on to learn Flutter and Dart.
 
 #### Credits
 
-[News app design](https://www.behance.net/gallery/102996435/News-App-Design) by [Umi Babakishiyeva](https://www.behance.net/umibabakishiyeva)
+[News app design](https://www.behance.net/gallery/102996435/News-App-Design) inspired by [Umi Babakishiyeva](https://www.behance.net/umibabakishiyeva)
