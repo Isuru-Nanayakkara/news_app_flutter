@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_flutter/data.dart';
-import 'package:news_app_flutter/home/news_items_list.dart';
+
 import 'news_category_tab.dart';
+import 'news_items_list.dart';
 
 class NewsTabController extends StatelessWidget {
   @override

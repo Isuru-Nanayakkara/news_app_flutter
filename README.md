@@ -2,14 +2,16 @@
 
 A project I'm working on to learn Flutter and Dart.
 
-#### Things to Learn
+This README documents the scope, design, to-do tasks and things I learned while working on it.
 
-- [ ] Widgets
-- [ ] Navigation
-- [ ] State Management
-- [ ] Networking
-- [ ] Local Data Persistence
+#### Scope
 
-#### Credits
+The app connects to [newsapi.org](https://newsapi.org/) API to fetch news articles and show them within the app. Users can bookmark news articles to view them later.
 
-[News app design](https://www.behance.net/gallery/102996435/News-App-Design) inspired by [Umi Babakishiyeva](https://www.behance.net/umibabakishiyeva)
+#### Design
+
+#### Development
+
+##### Component Design
+
+###### Widgets

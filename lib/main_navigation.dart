@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_flutter/home/home_screen.dart';
+
+import 'screens/home/home_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   @override
