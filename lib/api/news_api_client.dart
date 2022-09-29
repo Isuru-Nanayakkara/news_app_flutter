@@ -15,11 +15,11 @@ class NewsApiClient implements NewsApi {
 
   @override
   Future<String> getTopHeadlines(
-      {required String category, required int page}) async {
+      {required NewsCategory category, required int page}) async {
     final uri = TopHeadlinesEndpoint(
       apiBaseUrl: _baseUrl,
       apiKey: _apiKey,
-      category: category,
+      category: category.name,
       page: page,
     ).uri;
     print(uri.toString());
