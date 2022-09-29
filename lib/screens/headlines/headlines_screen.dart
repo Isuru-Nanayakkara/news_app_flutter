@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' show Client;
 import 'package:news_app_flutter/api/news_api.dart';
 import 'package:news_app_flutter/api/news_api_client.dart';
 
@@ -35,7 +35,7 @@ class _HeadlinesScreenState extends State<HeadlinesScreen>
           'Selected category: ${widget.categories[_tabController.index]}');
     });
 
-    var apiClient = NewsApiClient(client: http.Client());
+    var apiClient = NewsApiClient(client: Client());
     apiClient.getTopHeadlines(category: NewsCategory.general, page: 1);
   }
 
