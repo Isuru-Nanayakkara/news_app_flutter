@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:news_app_flutter/api/endpoints/top_headlines_endpoint.dart';
+import 'package:news_app_flutter/api/models/article.dart';
 import 'package:news_app_flutter/api/models/top_headlines_response.dart';
 import 'package:news_app_flutter/api/news_api.dart';
 
@@ -14,7 +15,7 @@ class NewsApiClient implements NewsApi {
   NewsApiClient({required this.client});
 
   @override
-  Future<String> getTopHeadlines(
+  Future<List<Article>> getTopHeadlines(
       {required NewsCategory category, required int page}) async {
     final uri = TopHeadlinesEndpoint(
       apiBaseUrl: _baseUrl,
@@ -24,14 +25,15 @@ class NewsApiClient implements NewsApi {
     ).uri;
     print(uri.toString());
 
-    final response = await client.get(uri);
-    final json = jsonDecode(response.body);
-    final r = TopHeadlinesResponse.fromJson(json);
-    print(r.status);
-    print(r.totalResults);
-    print('Articles: ${r.articles.length}');
+    final httpResponse = await client.get(uri);
+    final json = jsonDecode(httpResponse.body);
+    final response = TopHeadlinesResponse.fromJson(json);
 
-    return Future.value('');
+    print('Status: ${response.status}');
+    print('Total results: ${response.totalResults}');
+    print('Articles: ${response.articles.length}');
+
+    return response.articles;
   }
 
   @override

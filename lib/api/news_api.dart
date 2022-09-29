@@ -1,5 +1,7 @@
+import 'package:news_app_flutter/api/models/article.dart';
+
 abstract class NewsApi {
-  Future<String> getTopHeadlines(
+  Future<List<Article>> getTopHeadlines(
       {required NewsCategory category, required int page});
   Future<String> getTopHeadlinesSources({required String category});
   Future<String> searchNews(
