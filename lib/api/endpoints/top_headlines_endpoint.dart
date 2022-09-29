@@ -9,8 +9,8 @@ class TopHeadlinesEndpoint {
   final int pageSize = 10;
 
   TopHeadlinesEndpoint({
-    this.apiBaseUrl = '',
-    this.apiKey = '',
+    required this.apiBaseUrl,
+    required this.apiKey,
     required this.category,
     required this.page,
   });

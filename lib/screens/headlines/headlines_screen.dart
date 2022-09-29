@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:news_app_flutter/api/news_api_client.dart';
 
 class HeadlinesScreen extends StatefulWidget {
   final List<String> categories = [
@@ -31,6 +33,9 @@ class _HeadlinesScreenState extends State<HeadlinesScreen>
       debugPrint(
           'Selected category: ${widget.categories[_tabController.index]}');
     });
+
+    var apiClient = NewsApiClient(client: http.Client());
+    apiClient.getTopHeadlines(category: 'general', page: 1);
   }
 
   @override

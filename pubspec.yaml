@@ -14,12 +14,16 @@ dependencies:
 
   cupertino_icons: 1.0.2
   http: 0.13.5
+  json_annotation: 4.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_app_name: 0.1.0
   flutter_launcher_icons: 0.9.2
+  build_runner: 2.2.1
+  json_serializable: 6.4.1
 
 flutter_app_name:
   name: "News App"
